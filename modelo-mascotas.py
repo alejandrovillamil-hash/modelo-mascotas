@@ -63,7 +63,7 @@ import traceback
 fecha_str = datetime.now().strftime("%Y%m%d_%H%M%S")
 sns.set_style('whitegrid')
 RND = 42
-
+'''
 INPUT_DIR = Path('C:/Users/alejo/OneDrive/Escritorio/Modelo mascotas/input/')
 OUTPUT_DIR = Path('C:/Users/alejo/OneDrive/Escritorio/Modelo mascotas/output/')
 
@@ -71,7 +71,7 @@ AUTH_PATH = Path(INPUT_DIR / 'automatizacion-480622-83f05856e13e.json')
 
 ARTIFACTS_MODEL_PATH = Path(OUTPUT_DIR / "artefactos_algoritmo.pkl")
 ARTIFACTS_DATA_ENG_PATH = Path(OUTPUT_DIR / "artefactos_data_engineering.pkl")
-
+'''
 PARAMETRIZACION_SHEET = "parametrizacion"
 EJECUCION_SHEET = "ejecucion"
 '''

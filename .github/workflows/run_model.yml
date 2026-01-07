@@ -33,7 +33,7 @@ jobs:
         env:
           GOOGLE_CREDENTIALS_PATH: service_account.json
         run: |
-          modelo-mascotas.py
+          python modelo-mascotas.py
           
 env:
   TRAIN: "false"
