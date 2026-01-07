@@ -85,7 +85,7 @@ MIRROR_WORKSHEET = "Hoja2"
 
 # TRAIN = False
 #NEW_RECORDS = False
-#WORKSHEET_NUEW_RECORDS = "Hoja5"
+#WORKSHEET_NEW_RECORDS = "Hoja5"
 
 '''
 SMOOTH_TE = 1.0
@@ -109,7 +109,7 @@ def str2bool(v):
 
 TRAIN = str2bool(os.getenv("TRAIN", "false"))
 NEW_RECORDS = str2bool(os.getenv("NUEVO", "false"))
-WORKSHEET_NUEW_RECORDS = os.getenv("NOMBRE_NUEVOS")
+WORKSHEET_NEW_RECORDS = os.getenv("NOMBRE_NUEVO") 
 
 def main():
 
@@ -326,7 +326,7 @@ def main():
     # Data engineering
 
     if NEW_RECORDS:
-        worksheet_new = sheet.worksheet(WORKSHEET_NUEW_RECORDS)
+        worksheet_new = sheet.worksheet(WORKSHEET_NEW_RECORDS)
         df_sheet_new = get_as_dataframe(worksheet_new, dtype=str).dropna(how="all")
 
         df_new_records = df_sheet_new.copy()

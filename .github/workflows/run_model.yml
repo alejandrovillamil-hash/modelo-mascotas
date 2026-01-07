@@ -49,7 +49,7 @@ jobs:
         run: |
           echo "TRAIN=${{ github.event.inputs.train }}" >> $GITHUB_ENV
           echo "NUEVO=${{ github.event.inputs.nuevo }}" >> $GITHUB_ENV
-          echo "NOMBRE_NUEVOS=${{ github.event.inputs.nombre_nuevos }}" >> $GITHUB_ENV
+          echo "NOMBRE_NUEVO=${{ github.event.inputs.nombre_nuevo }}" >> $GITHUB_ENV
 
       - name: Ejecutar modelo
         env:
