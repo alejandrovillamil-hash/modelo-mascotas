@@ -1,0 +1,12 @@
+# credenciales
+*.json
+
+# artefactos ML
+artifacts/*.pkl
+
+# python
+__pycache__/
+.ipynb_checkpoints/
+
+# system
+.DS_Store
