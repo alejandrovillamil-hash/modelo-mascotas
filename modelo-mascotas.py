@@ -48,12 +48,12 @@ from rapidfuzz import process, fuzz
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from gspread_dataframe import get_as_dataframe, set_with_dataframe
-
+'''
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
 from google.oauth2.service_account import Credentials
 import json
-
+'''
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
