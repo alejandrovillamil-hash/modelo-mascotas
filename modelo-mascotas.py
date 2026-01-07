@@ -74,7 +74,7 @@ ARTIFACTS_DATA_ENG_PATH = Path(OUTPUT_DIR / "artefactos_data_engineering.pkl")
 '''
 PARAMETRIZACION_SHEET = "parametrizacion"
 EJECUCION_SHEET = "ejecucion"
-'''
+
 PETTITO_SHEET = "Master Puppy Information Sheet"
 MASTER_WORKSHEET = "Master Tab"
 MIRROR_WORKSHEET = "Mirror Master Tab"
@@ -82,7 +82,7 @@ MIRROR_WORKSHEET = "Mirror Master Tab"
 PETTITO_SHEET = "datos_mascotas"
 MASTER_WORKSHEET = "Hoja1"
 MIRROR_WORKSHEET = "Hoja2"
-
+'''
 # TRAIN = False
 #NEW_RECORDS = False
 #WORKSHEET_NEW_RECORDS = "Hoja5"

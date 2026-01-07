@@ -19,7 +19,7 @@ on:
         default: "false"
     
   schedule:
-    - cron: '0 7 * * *'   # todos los días 7:00 AM UTC
+    - cron: "0 12 * * 4"   # todos los jueves 7:00 AM UTC
 
 jobs:
   run-model:
@@ -47,9 +47,9 @@ jobs:
           
       - name: Definir variables de entorno
         run: |
-          echo "TRAIN=${{ github.event.inputs.train }}" >> $GITHUB_ENV
-          echo "NUEVO=${{ github.event.inputs.nuevo }}" >> $GITHUB_ENV
-          echo "NOMBRE_NUEVO=${{ github.event.inputs.nombre_nuevo }}" >> $GITHUB_ENV
+          echo "TRAIN=${{ github.event.inputs.train || 'false' }}" >> $GITHUB_ENV
+          echo "NUEVO=${{ github.event.inputs.nuevo || 'false' }}" >> $GITHUB_ENV
+          echo "NOMBRE_NUEVO=${{ github.event.inputs.nombre_nuevo || 'false' }}" >> $GITHUB_ENV
 
       - name: Ejecutar modelo
         env:
