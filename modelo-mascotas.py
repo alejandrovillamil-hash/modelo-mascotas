@@ -111,13 +111,6 @@ TRAIN = str2bool(os.getenv("TRAIN", "false"))
 NEW_RECORDS = str2bool(os.getenv("NUEVO", "false"))
 WORKSHEET_NUEW_RECORDS = os.getenv("NOMBRE_NUEVOS")
 
-
-print("▶ TRAIN:", TRAIN)
-print("▶ SHEET_ID:", SHEET_ID)
-print("▶ NOTIFY_EMAIL:", NOTIFY_EMAIL)
-
-
-
 def main():
 
     
