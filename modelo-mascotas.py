@@ -84,8 +84,8 @@ MASTER_WORKSHEET = "Hoja1"
 MIRROR_WORKSHEET = "Hoja2"
 
 # TRAIN = False
-NEW_RECORDS = False
-WORKSHEET_NUEW_RECORDS = "Hoja5"
+#NEW_RECORDS = False
+#WORKSHEET_NUEW_RECORDS = "Hoja5"
 
 '''
 SMOOTH_TE = 1.0
@@ -102,7 +102,19 @@ TOP_K = 10
 DEFAULT_FLOOR_PCT = 0.00
 def enviar_correo(asunto, mensaje):DEFAULT_MARGIN = 0.00'''
 
-TRAIN = os.getenv("TRAIN", "false").lower() == "true"
+#TRAIN = os.getenv("TRAIN", "false").lower() == "true"
+
+def str2bool(v):
+    return str(v).lower() in ("true", "1", "yes", "y")
+
+TRAIN = str2bool(os.getenv("TRAIN", "false"))
+NEW_RECORDS = str2bool(os.getenv("NUEVO", "false"))
+WORKSHEET_NUEW_RECORDS = os.getenv("NOMBRE_NUEVOS")
+
+
+print("▶ TRAIN:", TRAIN)
+print("▶ SHEET_ID:", SHEET_ID)
+print("▶ NOTIFY_EMAIL:", NOTIFY_EMAIL)
 
 
 

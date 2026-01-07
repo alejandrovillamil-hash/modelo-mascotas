@@ -1,7 +1,23 @@
 name: Ejecutar modelo mascotas
 
 on:
-  workflow_dispatch:   # ejecución manual
+  workflow_dispatch:
+    inputs:
+      train:
+        description: "¿Entrenar modelo? (true / false)"
+        required: true
+        default: "false"
+
+      nuevo:
+        description: "Mascotas nuevas (true / false)"
+        required: true
+        default: "false"
+        
+      nombre_nuevo:
+        description: "Nombre hoja de mascotas nuevas"
+        required: true
+        default: "false"
+    
   schedule:
     - cron: '0 7 * * *'   # todos los días 7:00 AM UTC
 
@@ -28,6 +44,12 @@ jobs:
           GOOGLE_CREDS: ${{ secrets.GOOGLE_CREDS }}
         run: |
           echo "$GOOGLE_CREDS" > service_account.json
+          
+      - name: Definir variables de entorno
+        run: |
+          echo "TRAIN=${{ github.event.inputs.train }}" >> $GITHUB_ENV
+          echo "NUEVO=${{ github.event.inputs.nuevo }}" >> $GITHUB_ENV
+          echo "NOMBRE_NUEVOS=${{ github.event.inputs.nombre_nuevos }}" >> $GITHUB_ENV
 
       - name: Ejecutar modelo
         env:
