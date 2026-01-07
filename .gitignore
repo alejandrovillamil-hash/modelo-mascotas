@@ -2,7 +2,7 @@
 *.json
 
 # artefactos ML
-artifacts/*.pkl
+# artifacts/*.pkl
 
 # python
 __pycache__/
